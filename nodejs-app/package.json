@@ -1,0 +1,15 @@
+{
+    "name": "nodejs-app",
+    "version": "1.0.1",
+    "description": "Web Node.js app",
+    "main": "app2.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "mongoose": "8.4.4",
+      "prom-client": "15.1.3"
+    }
+  }
+  

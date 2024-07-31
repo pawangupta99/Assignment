@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nodejs
+  template:
+    metadata:
+      labels:
+        app: nodejs
+        monitoring: enabled
+    spec:
+      containers:
+      - name: nodejs
+        image: pawangupta/poc:33
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "200m"
+          limits:
+            memory: "128Mi"
+            cpu: "300m" 
+        ports:
+        - containerPort: 3001
+          name: http-metrics1
