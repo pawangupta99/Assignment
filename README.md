@@ -57,28 +57,27 @@ It contains the docker file as well.
 Node Js service makes a connection to Mongo DB to get the home page content from the DB table <br>
 ![img_1.png](screenshots/img_1.png)
 
-Prometheus: <br>
+<br> **Prometheus:** <br> <br>
 ![img_2.png](screenshots/img_2.png)
 
 ### **Scaling**<br>
-When the large number of requests are done on node service, the pods are scaling.
+When the large number of requests are hits on the node service, the pods starts scaling up and later they scale down automatically when the load starts decreasing.
 
 #### **Before Scaling**<br>
-Below is the 
-initial state of the pod before scaling done through stress testing:
+Below is the initial state of the pod before scaling done through stress testing:
 
-Pod state:
-![1.png](screenshots/1.png)
+Initial Pod State and Count:
+![1.png](screenshots/1.png) <br>
 Monitoring:
 ![img_5.png](screenshots/img_5.png)
 
 
 #### **After Scaling**<br>
 
-Pod state:
+After Pod State and Count:  <br>
 ![2.png](screenshots/2.png)
 
-After scale testing, Pods are scaled up to 4 from earlier 2
+After scale testing, Pods are scaled up to  **4 from 2.**
 ![img_6.png](screenshots/img_6.png)
 
 <br><br>
