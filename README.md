@@ -13,7 +13,7 @@
 ### Important Links:
 
 
-**GitHub**:
+
 <br>
 **UI**: http://34.136.51.91/
 <br>
