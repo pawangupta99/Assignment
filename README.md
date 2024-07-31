@@ -13,8 +13,6 @@
 ### Important Links:
 
 
-
-<br>
 **UI**: http://34.136.51.91/
 <br>
 Endpoints to view metrics on UI as well: http://34.136.51.91/metrics
