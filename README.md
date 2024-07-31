@@ -1,6 +1,4 @@
-
-
-###Tech Stack:
+### Tech Stack:
 
 
 **Infrastructure as code** - Terraform <br>
