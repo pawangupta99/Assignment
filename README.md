@@ -1,4 +1,4 @@
-### Tech Stack:
+## Tech Stack:
 
 
 **Infrastructure as code** - Terraform <br>
@@ -8,7 +8,7 @@
 **Monitoring** - Prometheus Operator and Grafana <br> <br>
 
 
-### Important Links:
+## Important Links:
 
 
 **UI**: http://34.136.51.91/
@@ -22,7 +22,7 @@ Login Credentials:  iduser/Grafana1#2  (Read only user)
 
 
 
-### Repo structure:
+## Repo structure:
 
 ![img.png](screenshots/img.png)
 
@@ -39,7 +39,7 @@ It contains the docker file as well.
 
 <br>
 
-### Implementation Details
+## Implementation Details
 
 **Cluster Autoscaler**: GKE's cluster autoscaler is enabled for our Kubernetes cluster, automatically resizing the number of nodes in the node pool based on workload demands.
 
@@ -47,13 +47,17 @@ It contains the docker file as well.
 
 **MongoDB Operator**: The MongoDB operator streamlines the setup of network configurations, persistent storage, and dedicated computing resources for each container, minimizing the need for manual intervention.
 
-**Prometheus Operator for Monitoring**: The Prometheus operator facilitates the monitoring of various Kubernetes metrics, such as pod health, CPU, and memory usage. We also track custom metrics, including total and active requests in real-time.
+### **Monitoring**<br>
 
-**Custom Metrics Monitoring and Alerting**: We've set up alerts to notify us if the number of active pods for our application drops below three at any time.
+We are monitoring **CPU and Memory Usage** of Node JS Application and Mongo DB service. Also we are monitoring the **total number of active requests** for the web application as this gives the 360 degree view of application and scaling requirement.
+
+* **Prometheus Operator for Monitoring**: The Prometheus operator facilitates the monitoring of various Kubernetes metrics, such as pod health, CPU, and memory usage. We also track custom metrics, including total and active requests in real-time.
+
+* **Custom Metrics Monitoring and Alerting**: We've set up alerts to notify us if the number of active pods for our application drops below three at any time.
 
 <br>
 
-### Implemention:
+## Implemention:
 Node Js service makes a connection to Mongo DB to get the home page content from the DB table <br>
 ![img_1.png](screenshots/img_1.png)
 
@@ -83,7 +87,16 @@ After scale testing, Pods are scaled up to  **4 from 2.**
 <br><br>
 
 
-### Alerts for Custom Metrics
+### **Monitoring Application Pods**<br>
+<img width="1636" alt="image" src="https://github.com/user-attachments/assets/c903962e-4d04-49fe-9602-23eb303269f0">
+
+
+### **Monitoring MongoDb Pods**<br>
+<img width="1634" alt="image" src="https://github.com/user-attachments/assets/a58affb6-af38-41aa-b3f2-2d181dd671af">
+
+
+
+### Alerting for Application Pod
 Alerting for the minimum number of Pods running by the app. This Alerts can be further integrated with Slack/Pager Duty <br>
 ![img3.png](screenshots/img3.png)
 
